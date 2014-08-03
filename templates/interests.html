@@ -73,25 +73,45 @@
     <!-- Carousel
 ================================================== -->
 <div class=container>
-  <br><br><br><br>
+  
+
   <div class="row-fluid">
-      <h1 class="pull-center">Research Interests</h1>
-      <p class="lead pull-center"></p>
+    
+    <div class="page-header">
+      <h1>My research interests <small><span class="glyphicon glyphicon-search"></span></small></h1>
+      <div class="list-group">
+      <a href="#one" class="list-group-item active">Planetary Nebulae Photometric catalogue</a>
+      <a href="#two" class="list-group-item">Planetary Nebulae Spectroscopic catalogue</a>
+    </div>
+
   </div>  
 
-  <div class="footer">
-    
-  </div>
-   <!-- <div class=jumbotron> -->
-  	  <!-- <FONT SIZE=4>I am not Alessia Longobardi</FONT> -->
-  <!-- </div> -->
+  <hr>
+
+
+
+      <h2>PNe Photometric Catalogue</h2>
+
+      <div id="one">
+         <FONT COLOR="black">1</FONT>. Refereed publication<br>
+      </div>
+
+
+      <div id="two">
+        <h2>PNe Photometric Catalogue</h2>
+          <FONT COLOR="black">1</FONT>. Conference proceeding<br>
+      </div>
+    </div>
+
+
 </div>
 
 <script>
-$(function(){
-      // carousel demo
-      $('.carousel').carousel()
-    })
+  $('.list-group-item').on('click',function(e){
+    var previous = $(this).closest(".list-group").children(".active");
+    previous.removeClass('active'); // previous list-item
+    $(e.target).addClass('active'); // activated list-item
+  });
 </script>
 
 {% endblock %}

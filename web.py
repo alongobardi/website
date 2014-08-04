@@ -10,7 +10,6 @@ def get_ads():
   # Static values
   BASE_PAGE = "http://apod.nasa.gov/apod/"
   IMAGE_STORED = "templates/apod.jpg"
-  IMAGE_LOG = "templates/last_image.log"
   BACKUP_URL = "http://thoselondonstudents.files.wordpress.com/2013/07/dsc_0500.jpg"
 
   # Obtain the webpage

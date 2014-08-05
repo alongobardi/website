@@ -4,7 +4,7 @@ def get_ads():
 
   # Useful imports
   import re
-  import urllib2
+  import urllib3
   import random
 
   # Static values
@@ -13,8 +13,8 @@ def get_ads():
   BACKUP_URL = "http://thoselondonstudents.files.wordpress.com/2013/07/dsc_0500.jpg"
 
   # Obtain the webpage
-  response = urllib2.urlopen(BASE_PAGE)
-  html = response.read()
+  http = urllib3.PoolManager()
+  html = http.request('GET', BASE_PAGE).data
 
   # RegEx that looks for the image name
   pattern = re.compile("<IMG SRC=\"image/.*\.jpg")

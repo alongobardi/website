@@ -12,6 +12,8 @@ def get_ads():
   IMAGE_STORED = "templates/apod.jpg"
   BACKUP_URL = "http://thoselondonstudents.files.wordpress.com/2013/07/dsc_0500.jpg"
 
+  #BACK_URLS = ["one.jpg", "two.jpg"]
+
   # Obtain the webpage
   http = urllib3.PoolManager()
   html = http.request('GET', BASE_PAGE).data
@@ -31,6 +33,7 @@ def get_ads():
   rand = random.random()
   if rand > 0.5:
     ads_url = BACKUP_URL
+
 
   return ads_url
 

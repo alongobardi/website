@@ -10,7 +10,11 @@ def get_ads():
   # Static values
   BASE_PAGE = "http://apod.nasa.gov/apod/"
   IMAGE_STORED = "templates/apod.jpg"
-  BACKUP_URL = "http://thoselondonstudents.files.wordpress.com/2013/07/dsc_0500.jpg"
+  #BACKUP_URL = "http://thoselondonstudents.files.wordpress.com/2013/07/dsc_0500.jpg"
+                
+
+  BACKUP_URL = "https://lh4.googleusercontent.com/-Y8gMy_GeFNM/VFOcLtFapPI/AAAAAAAAAEY/HdicNXq4yH0/w1598-h899-no/P1030294.jpg"
+
 
   #BACK_URLS = ["one.jpg", "two.jpg"]
 
@@ -28,11 +32,14 @@ def get_ads():
     ads_url = "{0}{1}".format(BASE_PAGE, image_link)
   except:
     ads_url = BACKUP_URL
+    #ads_url = BACKUP_URL[0]
 
   # Add some flare
   rand = random.random()
   if rand > 0.5:
+    #rand_index = int(random.random()*len(BACK_URL))
     ads_url = BACKUP_URL
+    #ads_url = BACKUP_URL[rand_index]
 
 
   return ads_url

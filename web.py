@@ -16,7 +16,7 @@ def get_ads():
   BACKUP_URL = ["https://lh4.googleusercontent.com/-Y8gMy_GeFNM/VFOcLtFapPI/AAAAAAAAAEY/HdicNXq4yH0/w1598-h899-no/P1030294.jpg"
 ,"https://lh6.googleusercontent.com/-soRMKsuGS7c/VFOcHveKmAI/AAAAAAAAAEM/u4SCIp3gX2o/w1598-h899-no/P1030253.jpg"
 ,"https://lh3.googleusercontent.com/-iu_9L35Ong0/VFOb_rpfIKI/AAAAAAAAAD4/1b9KD9zzCv0/w1598-h899-no/P1030193%2B-%2BVersion%2B2.jpg"
-,"https://lh5.googleusercontent.com/-ZjrwsMlhoKQ/VFOb15W1iII/AAAAAAAAAEs/lcH_S9Pb4gs/w1598-h700-no/P1030187.jpg"
+,"https://lh5.googleusercontent.com/-ZjrwsMlhoKQ/VFOb15W1iII/AAAAAAAAAEs/lcH_S9Pb4gs/w1598-h700-no/P1030187.jpg"]
   #BACK_URLS = ["one.jpg", "two.jpg"]
 
   # Obtain the webpage
@@ -37,11 +37,10 @@ def get_ads():
 
   # Add some flare
   rand = random.random()
-  if rand > 0.5:
-    rand_index = int(random.random()*len(BACK_URL))
+  if rand > 0.4:
+    rand_index = int(random.random()*len(BACKUP_URL))
     #ads_url = BACKUP_URL
     ads_url = BACKUP_URL[rand_index]
-
 
   return ads_url
 
